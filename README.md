@@ -130,9 +130,6 @@ Si deseas contribuir al proyecto, por favor sigue los siguientes pasos:
 
 ### Developer's
 
-<a href="https://github.com/locano">
-  <img width='75' src="https://avatars.githubusercontent.com/u/16949087?v=4" alt="Bryan Espana" />
-</a>
 
 * [![Linkedin][Linkedin]][Linkedin-lud]
 * [![GitHub][GitHub]][GitHub-lud]
