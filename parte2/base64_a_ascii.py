@@ -22,7 +22,7 @@ def indices_a_binario(texto_en_indices):
         
         while numero > 0:
             resultado_modulo = numero % 2
-            binario = str(resultado_modulo)+ binario
+            binario = str(resultado_modulo) + binario
             numero = numero // 2
         
         while len(binario) < 6:
@@ -36,7 +36,33 @@ def indices_a_binario(texto_en_indices):
         resultado += byte + " "
 
     return resultado.strip()
-    
 
-print("BASE64: " + texto_base64)
-print("BINARIO: " + indices_a_binario(base64_a_indices(texto_base64)))
+def binario_a_decimal(texto_binario):
+    resultado = ""
+    
+    for binario_num in texto_binario.split():
+        decimal = 0
+        potencia = 0
+        
+        for digito in reversed(binario_num):
+            decimal += int(digito) * (2 ** potencia)
+            potencia += 1
+        
+        resultado += str(decimal) + " "
+    
+    return resultado.strip()
+
+def base64_a_ascii(texto_base64):
+    indices = base64_a_indices(texto_base64)
+    binario = indices_a_binario(indices)
+    ascii_resultado = binario_a_decimal(binario)
+    return ascii_resultado
+
+
+indices = base64_a_indices(texto_base64)
+binario = indices_a_binario(indices)
+ascii_resultado = binario_a_decimal(binario)
+
+print("BASE64: \n  " + texto_base64)
+print("BINARIO: \n  " + binario)
+print("ASCII: \n  " + ascii_resultado)

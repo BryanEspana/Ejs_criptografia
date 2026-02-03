@@ -1,4 +1,4 @@
-texto = "hola"
+texto = "EstaEsUnaPrueba"
 
 def texto_a_ascii(texto):
     texto_en_ascii = ""
@@ -22,5 +22,5 @@ def ascii_a_binario(texto_en_ascii):
 
     return resultado.strip()
     
-
-print(ascii_a_binario(texto_a_ascii(texto)))
+print("TEXTO: \n" + texto)
+print("BINARIO: \n" + ascii_a_binario(texto_a_ascii(texto)))
